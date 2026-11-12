@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Riders: buy and sell luxury bikes in person.">
+<title>Riders – Buy and sell luxury bikes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#top">Riders</a>
+  <nav>
+    <a class="link" href="#floor">The floor</a>
+    <a class="link" href="#how">How it works</a>
+    <button class="link" id="savedBtn" aria-pressed="false">Saved (0)</button>
+    <button class="btn fill" id="sellOpen">Sell a bike</button>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="feat mono"><span id="featLine"></span><button id="featBtn">See this bike</button></div>
+  <h1>Luxury bikes, bought and sold in person.</h1>
+  <p class="lede">Every bike on the floor has its papers checked before it is listed. Filter by make, type and budget, then reserve the one you want.</p>
+  <div class="cta"><a class="btn fill" href="#floor">Browse the floor</a><button class="btn" id="sellOpen2">List your bike</button></div>
+  <div class="strip" aria-hidden="true"><div class="track" id="track"></div></div>
+</div>
+
+<section id="floor">
+  <h2>The floor</h2>
+  <p class="sub">Filter by make, type and budget. Open any bike for the full spec sheet and to reserve it.</p>
+  <div class="note mono">Sample listings for demonstration. Prices and details are examples.</div>
+  <div class="filters">
+    <div class="full"><label class="l mono" for="q">Search</label><input type="text" id="q" placeholder="Indian, Scout, Mumbai…"></div>
+    <div><label class="l mono" for="make">Make</label><select id="make"></select></div>
+    <div><label class="l mono" for="price">Up to <span id="pv" style="color:var(--ink)">any price</span></label><input type="range" id="price" min="100000" max="3000000" step="50000" value="3000000"></div>
+    <div><label class="l mono" for="sort">Sort</label><select id="sort"><option value="new">Newest listed</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="km">Fewest km</option></select></div>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="count mono" id="count"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="how">
+  <h2>How it works</h2>
+  <div class="how">
+    <div><h3>Papers checked</h3><p>Registration, insurance and service records are reviewed before a bike appears on the floor.</p></div>
+    <div><h3>Reserve in a minute</h3><p>Leave your name and number on any bike. The seller calls you to fix a viewing.</p></div>
+    <div><h3>Sell with photos</h3><p>Add your bike’s details and a photo. It joins the floor once its papers are checked.</p></div>
+  </div>
+</section>
+
+<footer><span class="logo" style="font-size:18px">Riders</span><span class="mono">Mumbai · Pune · Bengaluru · Delhi</span></footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt"><div class="dh"><span class="mono" id="dt"></span><button id="dx">Close</button></div><div class="db" id="dbody"></div></dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
